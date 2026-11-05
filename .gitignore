@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.ipynb_checkpoints/
+
+# envs
+.venv/
+venv/
+env/
+
+# editor / OS
+.vscode/
+.idea/
+.DS_Store
+*.swp
+
+# local runs / scratch
+*.log
+scratch/
+tmp/
+
+# data & model outputs (live under $BACCARAT_ROOT, never in the repo)
+*.mp4
+*.pkl
+*.onnx
+*.pth
+weights/

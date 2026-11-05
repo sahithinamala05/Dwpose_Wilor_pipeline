@@ -1,0 +1,11 @@
+# Core (pose extraction, interpolation, video I/O)
+numpy>=1.24
+opencv-python>=4.8
+
+# Inference backends
+onnxruntime-gpu>=1.17      # DWpose + InsightFace (CUDA). cuDNN comes from torch's bundled libs:
+                          #   export LD_LIBRARY_PATH=$(python -c "import torch,os;print(os.path.dirname(torch.__file__)+'/lib')"):$LD_LIBRARY_PATH
+torch>=2.1                 # WiLoR (MANO hand) + provides libcudnn for onnxruntime-gpu
+insightface>=0.7           # dealer-identity face embeddings (single_dealer_filter, dealer_change*)
+
+# System (not pip): ffmpeg  -- used for all video decode/encode (apt install ffmpeg)
